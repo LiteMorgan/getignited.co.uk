@@ -1,0 +1,37 @@
+---
+layout: default
+---
+<section class="container content-wrap">
+  <div class="content content__hero">
+    <h1 class="heading heading__page-title">{{ page.title | escape }}</h1>
+    {% if intro.copy %}<p class="m-0">{{ intro.copy | escape }}</p>{% endif %}
+  </div>
+</section>
+
+<section class="container content-wrap">
+  <div class="content">
+    <div class="grid grid-post-wrap">
+    {% for post in site.categories.blog %}
+      <a class="grid-post {% if forloop.first %}grid-post--featured{% endif %}" href="{{ post.url | relative_url }}">
+        <div class="grid-post-content">
+          <div class="grid-post-content__img">
+            <picture>
+              <source srcset="/img/blog/{{ post.date | date: '%Y-%m-%d' }}-{{ post.slug }}-thumb.2x.png,
+                              /img/blog/{{ post.date | date: '%Y-%m-%d' }}-{{ post.slug }}-thumb.3x.png 3x">
+              <img class="i--w" src="/img/blog/{{ post.date | date: '%Y-%m-%d' }}-{{ post.slug }}-thumb.2x.png" alt="">
+            </picture>
+          </div>
+          <div class="grid-post-content__copy">
+            <span class="date">{{ post.date | date: "%B %-d, %Y" }}</span>
+            <h3 class="heading heading__subtitle">{{ post.title }}</h3>
+            <p>{{ post.summary }}</p>
+            {% for tag in post.subcategories %}
+              <span class="tag">{{ tag }}</span>
+            {% endfor %}
+          </div>
+        </div>
+      </a>
+    {% endfor %}
+    </div>
+  </div>
+</section>

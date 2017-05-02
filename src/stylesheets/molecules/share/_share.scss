@@ -1,0 +1,22 @@
+// For Share buttons
+@import 'config';
+
+.share {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 340px;
+  min-width: 340px;
+  margin: 0 auto;
+  padding: $spacing-base $spacing-base;
+  border-left: $spacing-sm $color-border solid;
+
+  &__icon {
+    padding: $spacing-base;
+
+    &--facebook { background: map-get-deep($share, 'colors', 'facebook'); }
+    &--twitter  { background: map-get-deep($share, 'colors', 'twitter'); }
+  }
+}

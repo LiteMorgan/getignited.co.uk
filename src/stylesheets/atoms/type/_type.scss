@@ -1,0 +1,242 @@
+// Typography
+
+// Paragraphs
+p, li {
+  margin:        0;
+  margin-bottom: $spacing-base;
+  font-family: $font-family-sans;
+  font-size: 1em;
+  line-height: 1.5;
+  color: $color-text;
+
+  strong {
+    font-weight: 500;
+    font-size: 1.15em;
+    color: $color-text-weak;
+  }
+}
+
+.p {
+
+  &__dek {
+    color: $color-text-weak;
+    font-size: 1.4em;
+    line-height: 1.2;
+  }
+
+  &__link {
+    margin-top: $spacing-md;
+    margin-bottom: $spacing-lg;
+    font-family: $font-family-serif;
+    font-size: 1.1em;
+  }
+}
+
+a,
+a:visited {
+  color: currentColor;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+p a,
+.p a,
+.caption a {
+  position: relative;
+  color: currentColor;
+  transition: color .2s ease-out;
+  white-space: nowrap;
+
+  &::before {
+    content: '';
+    position: absolute;
+    right:  0;
+    bottom: -3px;
+    left:   0;
+    display: block;
+    height: 2px;
+    width:  100%;
+    background: $brand-primary;
+    transition: all .2s ease-out;
+  }
+
+  .cntr__hero & {
+    &::before { background: $brand-secondary; }
+  }
+}
+
+
+// Small
+small {
+  display: block;
+  margin-bottom: $spacing-base;
+  color: $color-text-weak;
+  font-family: $font-family-sans;
+  font-size: .9em;
+  line-height: 1.3;
+}
+
+// Lists
+ul {
+  margin: 0;
+  padding: 0;
+  padding-left: 1.25rem;
+
+  li {
+    list-style: square;
+  }
+}
+
+blockquote {
+  width: 85%;
+  margin:  0;
+  padding: $spacing-sm 0 $spacing-base;
+  font-family: $font-family-serif;
+  font-size: 1.6em;
+  font-style: italic;
+
+  & > p {
+    margin: 0;
+    color: $brand-primary;
+    line-height: 1.2;
+  }
+}
+
+// Captions
+.caption {
+  color: $color-text-weak;
+  font-family: $font-family-mono;
+  font-size: .9em;
+  font-style: italic;
+  letter-spacing: -1px;
+  line-height: 1.4
+}
+
+// Labels
+label {
+  margin: 0;
+  color: $color-text-weak;
+  font-size: 1em;
+  font-family: $font-family-mono;
+  text-transform: uppercase;
+}
+
+
+// Tags
+.tag {
+  display: inline-block;
+  padding: .4rem $spacing-sm;
+  font-family: $font-family-mono;
+  font-size: .7em;
+  background: $brand-primary;
+}
+
+
+// Date
+.date {
+  display: block;
+  padding-bottom: $spacing-sm;
+  color: $color-text-weak;
+  font-family: $font-family-mono;
+  font-size: .7em;
+}
+
+
+// Headings
+.heading {
+  margin: 0;
+  color: $color-text-heading;
+  line-height: 1;
+
+  // Page titles
+  &__hero,
+  &__page-title {
+    font-family: $font-family-headings;
+    font-weight: 800;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+  }
+
+  // For use on home page exclusively
+  &__hero {
+    width: 92%;
+    margin-bottom: $spacing-sm;
+    font-size: 4em;
+
+    @media screen and (min-width: $screen-lg) {
+      font-size: 5em;
+    }
+  }
+
+  // For use on other pages
+  &__page-title {
+    width: 90%;
+    margin-bottom: $spacing-base;
+    font-size: 2.2em;
+  }
+
+  // Article + Project headers
+  &__article-title {
+    padding-bottom: $spacing-base;
+    font-family: $font-family-serif;
+    font-size: 2em;
+    font-weight: 400;
+    line-height: 1.1; 
+    letter-spacing: .2px;
+  }
+
+  // Section titles
+  &__section {
+    position: relative;
+    padding-top:    $spacing-base;
+    padding-bottom: $spacing-base;
+    font-family: $font-family-headings;
+    font-size: 2em;
+    text-transform: uppercase;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      height: .5rem;
+      width:  4rem;
+      background: $color-text-heading;
+    }
+  }
+
+  // Section subtitles, Article + Project previews
+  &__subtitle {
+    padding-bottom: $spacing-base;
+    font-family: $font-family-sans;
+    font-size: 1.4em;
+    font-weight: 500;
+
+    p + & {
+      margin-top:  $spacing-md;
+    }
+  }
+}
+
+
+// Text Aligns
+.ta {
+  &--l { text-align: left; }
+  &--r { text-align: right; }
+  &--c { text-align: center; }
+}
+
+
+// Text Color modifiers
+.t-c {
+
+  // Weak
+  &-w {
+    color: $color-text-weak;
+  }
+
+  // Light
+  &-l {
+    p, li { color: $color-text-invert; }
+    small { color: $color-text-weak-invert; }
+  }
+}

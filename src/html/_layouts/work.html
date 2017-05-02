@@ -1,0 +1,35 @@
+---
+layout: default
+---
+<section class="container content-wrap">
+  <div class="content content__hero">
+    <h1 class="heading heading__page-title">{{ page.title | escape }}</h1>
+  </div>
+</section>
+
+<section class="container content-wrap">
+  <div class="content">
+    <div class="grid grid-card-wrap">
+    {% for work in site.categories.work %}
+    {% if work.featured %}
+      <div class="grid-card">
+        <a href="{{ work.url | relative_url }}" class="container grid-card--{{ work.slug }}">
+          <!--<img class="grid-card__img i--w" src="http://placehold.it/600x900/{{ work.color | remove: '#' }}/ffffff"> -->
+          <picture>
+            <source srcset="/img/posters/{{ work.slug }}.2x.jpg,
+                            /img/posters/{{ work.slug }}.3x.jpg 3x">
+            <img class="grid-card__img i--w" src="/img/posters/{{ work.slug }}.jpg" alt="">
+          </picture>
+          <div class="grid-card__tags-wrap">
+          {% for tag in work.project.subcategories %}
+            <span class="grid-card__tag">{{ tag }}</span>
+          {% endfor %}
+          </div>
+          <h3 class="heading heading__subtitle grid-card__title">{{ work.title }}</h3>
+        </a>
+      </div>
+    {% endif %}
+    {% endfor %}
+    </div>
+  </div>
+</section>

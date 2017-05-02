@@ -1,0 +1,210 @@
+// Navigation
+@import 'config';
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  height: 100vh;
+  width:  100%;
+  font-size: 1.5em;
+  transform: translateX(100%);
+  z-index: $z-mobile-nav;
+  transition: transform $nav-appear-duration $nav-transition 0s;
+
+  &--open & { transform: translateX(0%); }
+
+  @media screen and (min-width: $screen-md) { 
+    display: none;
+  }
+
+  &__bg {
+    position: absolute;
+    top:  0;
+    left: 50%;
+    height: 100%;
+    width:  100%;
+    background: $white;
+    transform: skewX(12deg);
+    transform-origin: left center;
+    z-index: $z-lowest;
+
+    @media screen and (min-width: $screen-sm) {
+      left: calc(100% - #{$nav-bg-width-landscape});
+      width: $nav-bg-width-landscape;
+    }
+  }
+
+  &__content {
+    width: 40%;
+    margin-left: 60%;
+    z-index: $z-mobile-nav;
+    padding:       0;
+    padding-right: $spacing-md;
+
+    @media screen and (min-width: $screen-sm) {
+      width: 40%;
+      margin-left: 60%;
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: $header-size;
+    margin-bottom: $spacing-lg;
+  }
+
+  &__body {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-end;
+    height: calc(100vh - #{$header-size});
+    overflow: scroll;
+
+    @media screen and (max-width: $screen-sm-max) {
+      touch-action: pan-y;
+      user-select: none;
+      -webkit-user-drag: none;
+      -webkit-tap-highlight-color: rgba(0,0,0,0);
+    }
+  }
+
+  &__row {
+    margin-bottom: $spacing-lg;
+    text-align: right;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing:  antialiased;
+
+    &--tier-2 { color: $color-text-weakest; }
+  }
+}
+
+
+.nav-list {
+  margin:  0;
+  padding: 0;
+  list-style-type: none;
+
+  &__item {
+    margin: 0;
+    list-style-type: none;
+    overflow: hidden;
+    color: currentColor;
+
+    a {
+      display: inline-block;
+      text-decoration: none;
+      will-change: transform;
+    }
+  }
+
+  &__link {
+    position: relative;
+    margin-bottom: $spacing-base;
+    line-height: 1;
+    text-transform: uppercase;
+
+    @media screen and (min-width: $screen-md) {
+      display: block;
+      float: left;
+      margin-bottom: 0;
+      margin-left:   $spacing-md;
+
+      &:first-of-type { margin-left: 0;}
+    }
+
+    // Mobile specific animations
+    @media screen and (max-width: $screen-sm-max) {
+      a {
+        transform: translateY(100%);
+        transition:  transform calc(#{$nav-links-duration / 2}) $nav-links-transition 0s;
+
+        .navbar--open & { transform: translateY(0%); }
+      }
+
+      @for $i from 1 to 5 {
+        .navbar--open &:nth-child(#{$i}) a {
+          transition-duration: $nav-links-duration;
+          transition-delay: calc(#{$nav-links-delay} + (#{$i} * #{$nav-links-added-delay}));
+        } 
+      }
+
+      &--active {
+        & a::before {
+          content: '';
+          position: absolute;
+          top:  50%;
+          left: 0;
+          display: inline-block;
+          width:  100%;
+          height: 16px;
+          background: $brand-primary;
+          transform: translateY(-50%) scaleX(0) skewY(0);
+          transform-origin: center;
+          z-index: $z-lowest;
+          transition: transform $nav-active-duration $nav-active-transition 0s;
+        }
+
+        .navbar--open & a::before {
+          transform: translateY(-50%) scaleX(1) skewY(-6deg);
+          transition-delay: $nav-active-delay;
+        }
+      }
+    }
+  }
+
+  // Nav list: Social Items
+  // - For any social links used in the 
+  //   nav
+  &__social-item {
+    display: block;
+    margin-bottom: $spacing-sm;
+    color: currentColor;
+
+    &:first-of-type { margin-left: 0; }
+
+    a {
+      transform: scale(0);
+      transition:  transform calc(#{$nav-social-duration / 2}) $nav-links-transition 0s;
+
+      .navbar--open & { transform: scale(1); }
+    }
+
+    @for $i from 1 to 6 {
+      .navbar--open &:nth-child(#{$i}) a {
+        transition-duration: $nav-social-duration;
+        transition-delay: calc(#{$nav-social-delay} + (#{$i} * #{$nav-social-added-delay}));
+      } 
+    }
+  }
+}
+
+
+// Nav Body BG
+// - The background colour shown over the 
+//   top of screen content
+//
+.nav-body-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background: rgba($brand-primary, .98);
+  opacity: 0;
+  pointer-events: none;
+  z-index: $z-nav-bg;
+  transition: opacity $nav-appear-duration $nav-transition 0s;
+
+  .navbar--open & {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  @media screen and (min-width: $screen-md) {
+    display: none;
+  }
+}

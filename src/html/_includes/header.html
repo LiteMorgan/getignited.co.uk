@@ -1,0 +1,25 @@
+<header class="header-bar {% if page.layout == 'project' or page.layout == 'post' %}header-bar--article{% else %}header-bar--standard{% endif %}" data-module="headerFix">
+  <section class="header-bar__content">
+    <a class="header-bar__logo" href="/">
+      {% if page.uid == 'home' %}
+      <i class="icon icon--getignited-full">{% include getignited-full.svg %}</i>
+      {% else %}
+      <i class="icon icon--getignited">{% include getignited.svg %}</i>
+      {% endif %}
+    </a>
+
+    <div class="header-bar__menu-toggle">
+      <i class="icon" data-module="navToggle">
+        <span class="icon icon--line"></span>
+        <span class="icon icon--line"></span>
+        <span class="icon icon--line"></span>
+      </i>
+    </div>
+
+    <nav class="header-bar__nav">
+      {% include nav-links.html %}
+    </nav>
+  </section>
+</header>
+
+{% include nav-mobile.html %}

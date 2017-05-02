@@ -1,0 +1,45 @@
+<section class="container content-wrap">
+  <div class="content">
+    {% for latest in site.data.latest %}
+    <h3 class="heading heading__subtitle">Currently</h3>
+    <p>A little insight into what I'm geeking on lately.</p>
+    <div class="list">
+      <ul class="list__column">
+        <li class="list__item m--b--s">
+          <i class="list__item__icon">
+            <svg viewBox="0 0 48 48" class="icon icon--latest icon--watching">
+              <use xlink:href="/img/spritesheets/icons.svg#watching"></use>
+            </svg>
+          </i>
+          <div class="list__item__content">
+            <span class="list__item--title">Watching</span>
+            {{ latest.watching }}
+          </div>
+        </li>
+        <li class="list__item m--b--s">
+          <i class="list__item__icon">
+            <svg viewBox="0 0 48 48" class="icon icon--latest icon--playing">
+              <use xlink:href="/img/spritesheets/icons.svg#playing"></use>
+            </svg>
+          </i>
+          <div class="list__item__content">
+            <span class="list__item--title">Playing</span>
+            {{ latest.playing }}
+          </div>
+        </li>
+        <li class="list__item m--b--s">
+          <i class="list__item__icon">
+            <svg viewBox="0 0 48 48" class="icon icon--latest icon--reading">
+              <use xlink:href="/img/spritesheets/icons.svg#reading"></use>
+            </svg>
+          </i>
+          <div class="list__item__content">
+            <span class="list__item--title">Reading</span>
+            {{ latest.reading }}
+          </div>
+        </li>
+      </ul>
+    </div>
+    {% endfor %}
+  </div>
+</section>

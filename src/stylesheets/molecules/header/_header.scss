@@ -1,0 +1,56 @@
+// Header
+
+.header-bar {
+  position: fixed;
+  top:  0;
+  left: 0;
+  width:  100%;
+  z-index: $z-header;
+  will-change: transform, background;
+  transition: all .2s ease-out;
+
+  &__content {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    height: $header-size;
+    padding: 0 $spacing-md;
+  }
+
+  &__logo {
+    display: block;
+  }
+
+  &__menu-toggle {
+    display: block;
+
+    @media screen and (min-width: $screen-md) {
+      display: none;
+    }
+  }
+
+  &__nav {
+    display: none;
+
+    @media screen and (min-width: $screen-md) {
+      display: block;
+    }
+  }
+
+  // Modifiers
+  &--standard { background: $brand-primary; }
+  &--article {
+    color: $color-text-invert;
+    background: linear-gradient(180deg,$color-text-weakest, transparent 80%);
+  }
+
+  @media screen and (max-width: $screen-sm-max) {
+    &--unpinned { transform: translateY(-100%); }
+    &--pinned   { transform: translateY(0); }
+  }
+
+  &--article {
+    &.header-bar--not-top { background: $color-background; color: $color-text;  }
+  }
+}
