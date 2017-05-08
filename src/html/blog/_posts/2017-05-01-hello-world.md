@@ -5,6 +5,10 @@ title:  Hello World!
 date:   2017-05-01
 subcategories: [site]
 
+images:
+  hero: 2017-05-01-hello-world
+  format: png
+
 summary:
   The magic words that start every website in development. Feels appropriate to start a blog with them, no?
 ---
