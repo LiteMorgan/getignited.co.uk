@@ -1,4 +1,10 @@
 <figure class="post-image">
-  <img class="i--w" src="{{ include.url }}" alt="{{ include.caption }}">
-  <figcaption class="post-image__caption caption ta--c">{{ include.caption }} {% if include.source %}Image by <a href="{{ include.link }}" target="_blank">{{ include.source }}</a>.{% endif %}</figcaption>
+  {% if include.type == 'gif' %}
+    <div class='gfyitem' data-id='{{ include.url }}'></div>
+  {% else %}
+    <img class="i--w" src="{{ include.url }}" alt="{{ include.caption }}">
+  {% endif %}
+  <figcaption class="post-image__caption caption ta--c">
+  {% if include.caption %}<span class="caption--hl">{{ include.caption }}</span>{% endif %}{% if include.source %}{% if include.caption %} | {% endif %}{% if include.link %}<a href="{{ include.link }}" target="_blank">{% endif %}{{ include.source }}{% if include.link %}</a>{% endif %}{% endif %}
+  </figcaption>
 </figure>

@@ -2,17 +2,21 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
   <title>{% if page.title %}{{ site.title }} – {{ page.title | strip_html | normalize_whitespace | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
-  <meta property="description"  content="{% if page.layout == 'project' or page.layout == 'post' %}{{ page.summary | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}{% else %}{{ site.description }}{% endif %}" />
-  {% include meta.html %}
 
-  <link rel="stylesheet" href="{{ "/stylesheets/app.css" | relative_url }}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
-  {% include app-icons.html %}
+  {% include _meta.html %}
+
+  {% include _app-icons.html %}
+
+  {% if site.google_analytics %}
+  {% include _google-analytics.html %}
+  {% endif %}
 
   <link rel="preload" as="font" href="/fonts/native/Native-Regular.woff" type="font/woff" crossorigin>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:800|Rubik:400,400i,500,500i|Bitter:400,400i" rel="stylesheet">
+  <link rel="stylesheet" href="{{ "/stylesheets/app.css" | relative_url }}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
 </head>
