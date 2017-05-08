@@ -11,8 +11,8 @@ p, li {
 
   strong {
     font-weight: 500;
-    font-size: 1.15em;
-    color: $color-text-weak;
+    //font-size: 1.15em;
+    //color: $color-text-weak;
   }
 }
 
@@ -38,6 +38,21 @@ a:visited {
   text-decoration: none;
   cursor: pointer;
 }
+
+
+// Captions
+.caption {
+  color: $color-text-weakest;
+  font-family: $font-family-mono;
+  font-size: .8em;
+  letter-spacing: -.5px;
+  line-height: 1.4;
+
+  &--hl {
+    color: $color-text-weak;
+  }
+}
+
 
 p a,
 .p a,
@@ -100,16 +115,6 @@ blockquote {
     color: $brand-primary;
     line-height: 1.2;
   }
-}
-
-// Captions
-.caption {
-  color: $color-text-weak;
-  font-family: $font-family-mono;
-  font-size: .9em;
-  font-style: italic;
-  letter-spacing: -1px;
-  line-height: 1.4
 }
 
 // Labels

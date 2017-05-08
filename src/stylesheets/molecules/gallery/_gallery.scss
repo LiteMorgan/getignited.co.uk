@@ -86,8 +86,12 @@
 
 .post-image {
   display: block;
-  margin:  0;
-  padding: $spacing-xl;
+  margin: $spacing-lg 0;
+
+  @media screen and (min-width: $screen-md) {
+    padding-right: $spacing-md;
+    padding-left:  $spacing-md;
+  }
 
   &__caption {
     padding-top: $spacing-sm;
