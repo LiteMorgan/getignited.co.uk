@@ -5,9 +5,9 @@ layout: default
   <section class="article-page__hero content-wrap">
     <div class="article-top">
       <picture>
-        <source srcset="/img/blog/{{ page.date | date: '%Y-%m-%d' }}-{{ page.slug }}-hero.2x.png,
-                        /img/blog/{{ page.date | date: '%Y-%m-%d' }}-{{ page.slug }}-hero.3x.png 3x">
-        <img class="article-top__hero-img i--w" src="/img/blog/{{ page.date | date: '%Y-%m-%d' }}-{{ page.slug }}-hero.2x.png" alt="">
+        <source srcset="/img/blog/{{ page.images.hero }}-hero.2x.{{ page.images.format | default: 'png' }},
+                        /img/blog/{{ page.images.hero }}-hero.3x.{{ page.images.format | default: 'png' }} 3x">
+        <img class="article-top__hero-img i--w" src="/img/blog/{{ page.images.hero }}-hero.2x.{{ page.images.format | default: 'png' }}" alt="">
       </picture>
     </div>
   </section>

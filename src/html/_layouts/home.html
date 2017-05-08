@@ -50,9 +50,9 @@ layout: default
           <div class="grid-post-content">
             <div class="grid-post-content__img">
               <picture>
-                <source srcset="/img/blog/{{ post.date | date: '%Y-%m-%d' }}-{{ post.slug }}-thumb.2x.png,
-                                /img/blog/{{ post.date | date: '%Y-%m-%d' }}-{{ post.slug }}-thumb.3x.png 3x">
-                <img class="i--w" src="/img/blog/{{ post.date | date: '%Y-%m-%d' }}-{{ post.slug }}-thumb.2x.png" alt="">
+                <source srcset="/img/blog/{{ post.images.hero }}-thumb.2x.{{ post.images.format | default: 'png' }},
+                                /img/blog/{{ post.images.hero }}-thumb.3x.{{ post.images.format | default: 'png' }} 3x">
+                <img class="i--w" src="/img/blog/{{ post.images.hero }}-thumb.2x.{{ post.images.format | default: 'png' }}" alt="">
               </picture>
             </div>
             <div class="grid-post-content__copy">
