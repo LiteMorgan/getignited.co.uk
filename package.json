@@ -7,7 +7,7 @@
   "author": "Liam Morgan",
   "repository": {
     "type": "git",
-    "url": "git://github.com/getignited/getignited.git"
+    "url": "git://github.com/getignited/getignited.github.io.git"
   },
   "scripts": {
     "build": "make build",
