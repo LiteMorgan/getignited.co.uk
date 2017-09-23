@@ -1,0 +1,23 @@
+{
+  "name": "getignited.co.uk",
+  "private": true,
+  "version": "3.0.0",
+  "description": "Personal portfolio for Liam Morgan",
+  "homepage": "http://getignited.co.uk",
+  "author": "Liam Morgan",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/getignited/getignited.co.uk.git"
+  },
+  "scripts": {
+    "build": "make build",
+    "start": "jekyll serve"
+  },
+  "devDependencies": {
+    "normalize.css": "^7.0.0",
+    "picturefill": "^3.0.2"
+  },
+  "dependencies": {
+    "lodash.debounce": "^4.0.8"
+  }
+}

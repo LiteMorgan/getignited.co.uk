@@ -1,0 +1,58 @@
+header {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-end;
+  justify-content: space-between;
+  width: 100%;
+  padding-top:   $spacing-md;
+  padding-right: $spacing-lg;
+  padding-left:  $spacing-lg;
+  background-color: $color-background-brand;
+
+  @media (min-width: $screen-size-lg) {
+    flex-flow: column nowrap;
+    position: absolute;
+    top:    0;
+    bottom: 0;
+    left:   0;
+    display: flex;
+    width: $spacing-header-base;
+    padding-top: $spacing-lg;
+  }
+
+  body:not(.home) & {
+    @media (max-width: $screen-size-md-max) {
+      background-color: $color-background;
+    }
+  }
+}
+
+
+// Header Logo defining styles
+.header-logo {
+  align-self: flex-end;
+  width: 32px;
+  margin-bottom:  auto;
+  color:      $color-text;
+
+  & svg {
+    fill: currentColor;
+    width:  32px;
+    height: auto;
+  }
+
+  & > h1,
+  & > span {
+    display: none;
+  }
+}
+
+
+// Hero text
+.hero {
+  display: none;
+
+  @media (min-width: $screen-size-lg) {
+    display: block;
+  }
+}

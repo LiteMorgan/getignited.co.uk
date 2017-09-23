@@ -1,0 +1,26 @@
+<header class="header">
+
+  
+  <a href="{{ site.url }}" class="header-logo" title="getignited" rel="home">
+    {% include icons/getignited.svg %}
+    {% if page.url == '/' %}
+      <h1>getignited</h1>
+    {% else %}
+      <span>getignited</span>
+    {% endif %}
+  </a>
+
+  <p class="hero ta--r">Hey, I'm Liam</p>
+
+  <nav class="nav">
+    <ul class="nav__navbar ta--r">
+      {% for item in site.data.navigation %}
+        <li class="{% if page.url contains item.url %}activ"{% endif %}">
+          <a href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+
+    {% include utilities/social-icons.html %}
+  </nav>
+</header>

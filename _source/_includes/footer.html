@@ -1,0 +1,9 @@
+<footer class="footer">
+  <section class="container container--section">
+    {% include utilities/social-icons.html %}
+    <div class="">
+      <small class="">Assembled with <a href="https://jekyllrb.com/">Jekyll</a>, <a href="https://www.sublimetext.com/">Sublime Text</a>, <a href="">github</a>, and the Power of Grayskull. {% for data in site.data.footer-link %}<a href="{{ data.url }}" target="_blank">{{ data.p }}</a>.{% endfor %}</small>
+      <p class="p-0">&copy; 2017 Liam Morgan.</p>
+    </div>
+  </section>
+</footer>

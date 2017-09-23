@@ -1,0 +1,60 @@
+// Container for all post types
+.post-container {
+  @include column-container();
+
+  // Create columns for post types
+  .blog-post,
+  .work-post {
+    @include column-block(1);
+    margin-bottom: $spacing-xl;
+
+    &:first-child {
+      box-shadow: none !important;
+    }
+
+    @media (max-width: $screen-size-base-max) {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    @media (min-width: $screen-size-sm) {
+      @include column-block(2);
+      @include column-border($color-border);
+      margin-bottom: $spacing-lg;
+
+      &:nth-child(odd) {
+        @include column-border(none);
+      }
+    }
+  }
+
+  // Feature posts should be locked to full-width
+  .feature-post {
+    @include column-block(1);
+  }
+
+  // Define containers that will use feature posts to
+  // adjust borders correctly
+  &--featured {
+    .blog-post,
+    .work-post {
+
+      @media (min-width: $screen-size-sm) {
+        &:nth-child(odd) {
+          @include column-border($color-border);
+        }
+
+        &:nth-child(even) {
+          @include column-border(none);
+        }
+      }
+    }
+  }
+}
+
+
+.post-image {
+  display: block;
+  width: 100%;
+}

@@ -1,0 +1,17 @@
+<figure class="image-block{% if include.small %} size-small{% endif %}">
+  <div class="image-container">
+    <div class="image-item">
+    {% if include.type == 'gif' %}
+    <div data-autoplay="true" data-id="{{ include.url }}" class="gfyitem"></div>
+    {% else %}
+      <img class="i--w" src="{{ include.url }}" alt="{{ include.caption }}">
+    {% endif %}
+    </div>
+  </div>
+  {% if include.caption %}
+  <figcaption class="image-caption">
+    {{ include.caption }}
+    {% if include.source %} | <span>{% if include.link %}<a href="{{ include.link }}" target="_blank">{{ include.source }}</a>{% else %}{{ include.source }}{% endif %}</span>{% endif %}
+  </figcaption>
+  {% endif %}
+</figure>

@@ -1,9 +1,7 @@
 .DS_Store
+_site
 .sass-cache
-.publish
-public
-Desktop.ini
+.jekyll-metadata
 node_modules
-**/generated/_icons.sass
-npm-debug.log
 yarn.lock
+

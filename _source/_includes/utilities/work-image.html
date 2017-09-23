@@ -1,0 +1,5 @@
+<div class="image-item{% if include.css %} {{ include.css }}{% endif %}">
+  <img class="i--w" 
+       src="/image/work/{{ page.date | date: '%Y-%m-%d' }}-{{ page.title | slugify }}/{{ include.filename }}" 
+       alt="{{ include.alt }}">
+</div>

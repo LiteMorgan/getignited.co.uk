@@ -1,0 +1,47 @@
+# Site settings
+title: getignited
+tagline: huh.
+email: lite@getignited.co.uk
+description: >
+  The digital portfolio of Liam Morgan
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://getignited.co.uk" # the base hostname & protocol for your site
+twitter_username: litemorgan
+instagram_username: litemorgan
+github_username:  getignited
+
+# Build settings
+source: _source
+highlighter: rouge
+markdown: kramdown
+
+include:
+  - _pages
+
+exclude:
+  - vendor
+  - node_modules
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - package.json
+
+# Blog settings
+permalink: /blog/:title
+paginate:  1
+
+gems:
+  - jekyll-sitemap
+  - jekyll-feed
+
+default_js:
+  - "//cdnjs.cloudflare.com/ajax/libs/lodash.js/4.16.3/lodash.min.js"
+  - "/scripts/vendor/picturefill.min.js"
+
+# Get consistent pagination links with production
+timezone: "Europe/London"
+
+# Meta info
+locale:                en_GB
+google_analytics:      UA-90596282-1
+facebook_developer_id: 1289739611061824

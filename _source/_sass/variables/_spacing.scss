@@ -1,0 +1,11 @@
+$spacing-base:  16px;
+$spacing-sm:    ceil(($spacing-base * 0.5)); // 8px
+$spacing-md:    ceil(($spacing-base * 1.5)); // 24px
+$spacing-lg:    ceil(($spacing-base * 3));   // 48px
+$spacing-xl:    ceil(($spacing-base * 4));   // 64px
+$spacing-xxl:   ceil(($spacing-base * 6));   // 64px
+
+$spacing-header-base:  360px;
+$spacing-header-large: 420px;
+$spacing-body-base:    calc(100% - #{$spacing-header-base});
+$spacing-body-large:   calc(100% - #{$spacing-header-large});

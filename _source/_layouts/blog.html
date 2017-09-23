@@ -1,0 +1,29 @@
+---
+layout: default
+custom_js:
+  - feature-cards.js
+---
+<article>
+  <section class="article-header">
+    <div class="article-hero">
+      <picture>
+        <source srcset="/images/blog/{{ page.images.hero }}-hero.2x.{{ page.images.format | default: 'png' }},
+                        /images/blog/{{ page.images.hero }}-hero.3x.{{ page.images.format | default: 'png' }} 3x">
+        <img class="article-top__hero-img i--w" src="/images/blog/{{ page.images.hero }}-hero.2x.{{ page.images.format | default: 'png' }}" alt="">
+      </picture>
+    </div>
+    <div class="card card__feature card__feature--article">
+      <h1 class="heading-primary">{{ page.title }}</h1>
+      <h2 class="heading-secondary t--lighter">{{ page.summary }}</h2>
+      <div class="card__meta">
+        <span class="meta t--lighter">{{ page.tags | join: ', ' }} — <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="article-content blog-article">
+    {{ content }}
+  </section>
+
+  {% include utilities/article-share.html %}
+</article>
