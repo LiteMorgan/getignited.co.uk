@@ -4,7 +4,7 @@
     {% if include.type == 'gif' %}
     <div data-autoplay="true" data-id="{{ include.url }}" class="gfyitem"></div>
     {% else %}
-      <img class="i--w" src="{{ include.url }}" alt="{{ include.caption }}">
+      <img class="i--w" src="/image/blog/{{ page.date | date: '%Y-%m-%d' }}-{{ page.title | slugify }}/{{ include.url }}" alt="{{ include.caption }}">
     {% endif %}
     </div>
   </div>
