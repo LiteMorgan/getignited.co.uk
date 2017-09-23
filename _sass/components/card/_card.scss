@@ -1,0 +1,83 @@
+.card {
+  $card: &;
+  position: relative;
+
+  &__link {
+    padding: $spacing-md 0;
+  }
+
+  &__meta {
+    padding-top: $spacing-base;
+  }
+
+  &__feature {
+
+    @media (min-width: $screen-size-md) {
+      width: 75%;
+      margin-top:     -74px;
+      padding-right:  $spacing-md;
+      padding-left:   $spacing-md;
+      background-color: $color-background;
+      will-change: margin-top;
+      transition: margin-top .1s ease-in-out;
+    }
+
+    @media (min-width: $screen-size-xl) {
+      width: 50%;
+      margin-left:  $spacing-md;
+    }
+
+    &--article {
+      @media (min-width: $screen-size-md) {
+        width: 80%;
+        padding-right: $spacing-lg;
+        padding-left:  $spacing-lg;
+      }
+
+      @media (min-width: $screen-size-lg) {
+        padding-left: $spacing-md;
+      }
+
+      
+      @media (min-width: $screen-size-xl) {
+        margin-left:  $spacing-lg;
+        padding-left: $spacing-lg;
+      }
+    }
+  }
+
+  a {
+    &:hover h2 {
+      text-shadow:  .03em 0 $color-background, 
+                    -.03em 0 $color-background, 
+                    0 .03em $color-background, 
+                    0 -.03em $color-background, 
+                    .06em 0 $color-background, 
+                    -.06em 0 $color-background, 
+                    .09em 0 $color-background, 
+                    -.09em 0 $color-background, 
+                    .12em 0 $color-background, 
+                    -.12em 0 $color-background, 
+                    .15em 0 $color-background, 
+                    -.15em 0 $color-background;
+
+      & > span {
+        background-size:     .05em .0625em, .05em .0625em, 2px 2px;
+        background-position: 0% 90%, 100% 90%, 0% 90%;
+        background-repeat:   no-repeat, no-repeat, repeat-x;
+        background-image:    linear-gradient($color-background, $color-background),
+                             linear-gradient($color-background, $color-background),
+                             linear-gradient($color-text 50%, $color-text 50%)
+      }
+    }
+  }
+}
+
+
+.blog-post .card,
+.work-post .card {
+  display: flex;
+  flex-direction:  column;
+  flex:            1;
+  justify-content: space-between;
+}

@@ -1,0 +1,95 @@
+@import "mixins";
+
+
+.columns {
+  @include column-container();
+}
+
+.col-wrap {
+  display: flex;
+  flex-flow: row wrap;
+  margin-right: -#{$spacing-md};
+  margin-left:  -#{$spacing-md};
+
+  &--border {
+    
+    .col {
+      @include column-border($color-border);
+
+      &:first-child {
+        box-shadow: none !important;
+      }
+    }
+  }
+}
+
+
+.col {
+  position: relative;
+  flex: 0 0 100%;
+  max-width:  100%;
+  padding: 0 $spacing-md;
+
+  &--spaced {
+    margin-bottom: $spacing-xl;
+  }
+
+  &--bordered {
+
+    &::before {
+      //content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 1px;
+      background-color: $color-border;
+
+      &:first-child {
+        display: none;
+      }
+
+      &:nth-child(even) {
+        display: none;
+      }
+
+
+    }
+  }
+}
+
+
+$grid-columns: 4;
+
+
+@for $i from 2 through $grid-columns {
+  .col--#{$i} { @include column-block(#{$i}); }
+}
+
+
+// Generate fixed column widths up to 767px
+@for $i from 2 through $grid-columns {
+
+  @media (min-width: $screen-size-sm) {
+    .col--sm--#{$i} { @include column-block(#{$i}); }
+  }
+}
+
+
+// Generate fixed column width from 768px to 991px
+@for $i from 2 through $grid-columns {
+
+  @media (min-width: $screen-size-md) {
+    .col--md--#{$i} { @include column-block(#{$i}); }
+  }
+}
+
+
+// Generate fixed column width for 992px and up
+@for $i from 2 through $grid-columns {
+
+  @media (min-width: $screen-size-lg) {
+    .col--lg--#{$i} {  @include column-block(#{$i}); }
+  }
+}

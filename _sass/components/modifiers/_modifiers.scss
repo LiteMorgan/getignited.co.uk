@@ -1,0 +1,42 @@
+// Text
+.t {
+  
+  // Increased text size
+  &--large {
+    font-size:   $font-size-largest;
+    line-height: $font-line-height-largest;
+  }
+
+  // Lighter colour text
+  &--light   { color: $color-text-weaker; }
+  &--lighter { color: $color-text-weakest; }
+}
+
+// Text align classes
+.ta {
+  &--l { text-align: left;   }
+  &--c { text-align: center; }
+  &--r { text-align: right;  }
+}
+
+
+// Margin and Padding
+.p-0 {
+  padding-bottom: 0;
+}
+
+
+// Images
+.i--w {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+// Layout
+.bg {
+  &--default {
+    background-color: $color-background-brand;
+  }
+}

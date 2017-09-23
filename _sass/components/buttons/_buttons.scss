@@ -1,0 +1,55 @@
+.btn-wrap {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  margin: $spacing-xl auto;
+  color: $color-text-weakest;
+
+  @media (min-width: $screen-size-sm) {
+    flex-flow: row nowrap;
+  }
+}
+
+
+.btn {
+  align-self: center;
+  display: inline-block;
+  margin-bottom: $spacing-md;
+  padding:       $spacing-base $spacing-lg;
+  color:       $color-text-weakest;
+  font-family: $font-family-sans-serif;
+  border: 1px solid $color-border;
+  cursor: pointer;
+
+  &:last-child { margin-bottom: 0; }
+
+  @media (min-width: $screen-size-sm) {
+    margin-bottom: 0;
+
+    & + & {
+      margin-left:   $spacing-base;
+    }
+  }
+
+  @media screen and (min-width: $screen-size-md) {
+    padding: $spacing-base $spacing-xl;
+  }
+
+  
+
+  &__share {
+
+    & > span,
+    & > svg {
+      vertical-align: middle;
+    }
+
+    & > svg {
+      display: inline-block;
+      width:  24px;
+      height: auto;
+      margin-right: $spacing-sm;
+      fill: currentColor;
+    }
+  }
+}
