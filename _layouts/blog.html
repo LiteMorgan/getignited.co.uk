@@ -6,11 +6,12 @@ custom_js:
 <article>
   <section class="article-header">
     <div class="article-hero">
-      <picture>
+      <!-- <picture>
         <source srcset="/images/blog/{{ page.images.hero }}-hero.2x.{{ page.images.format | default: 'png' }},
                         /images/blog/{{ page.images.hero }}-hero.3x.{{ page.images.format | default: 'png' }} 3x">
         <img class="article-top__hero-img i--w" src="/images/blog/{{ page.images.hero }}-hero.2x.{{ page.images.format | default: 'png' }}" alt="">
-      </picture>
+      </picture> -->
+      <img class="article-top__hero-img i--w" src="/image/work/{{ page.date | date: '%Y-%m-%d' }}-{{ page.title | slugify }}/thumb.{{ page.thumb.format | default: 'png' }}" alt="">
     </div>
     <div class="card card__feature card__feature--article">
       <h1 class="heading-primary">{{ page.title }}</h1>
