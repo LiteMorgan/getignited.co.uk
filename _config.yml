@@ -11,7 +11,8 @@ instagram_username: litemorgan
 github_username:  getignited
 
 # Build settings
-source: _source
+source:      _source
+destination: _site
 highlighter: rouge
 markdown: kramdown
 
