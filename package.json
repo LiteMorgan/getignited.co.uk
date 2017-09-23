@@ -1,5 +1,5 @@
 {
-  "name": "getignited.co.uk",
+  "name": "getignited",
   "private": true,
   "version": "3.0.0",
   "description": "Personal portfolio for Liam Morgan",
@@ -7,7 +7,7 @@
   "author": "Liam Morgan",
   "repository": {
     "type": "git",
-    "url": "git://github.com/getignited/getignited.co.uk.git"
+    "url": "git://github.com/getignited/getignited.git"
   },
   "scripts": {
     "build": "make build",
