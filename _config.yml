@@ -5,14 +5,13 @@ email: lite@getignited.co.uk
 description: >
   The digital portfolio of Liam Morgan
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://getignited.co.uk" # the base hostname & protocol for your site
+url: "" # the base hostname & protocol for your site
 twitter_username: litemorgan
 instagram_username: litemorgan
 github_username:  getignited
 
 # Build settings
 source:      _source
-destination: _site
 highlighter: rouge
 markdown: kramdown
 
