@@ -32,7 +32,7 @@ h6 {
   vertical-align: baseline;
 }
 
-h2 { @include heading-rubik($font-size-h2, 700); }
+h2 { @include heading-rubik($font-size-h2, 500); }
 h3 { @include heading-rubik($font-size-h3, 400); }
 
 
@@ -68,7 +68,7 @@ h3 { @include heading-rubik($font-size-h3, 400); }
 
 // Article header styles
 .article-header h1 {
-  @include heading-rubik($font-size-h1, 700);
+  @include heading-rubik($font-size-h1, 500);
   padding-top: $spacing-md;
 }
 
@@ -81,7 +81,7 @@ h3 { @include heading-rubik($font-size-h3, 400); }
 // Mid-content headings
 .page h2,
 .article-content h2 {
-  @include heading-rubik($font-size-h3, 700);
+  @include heading-rubik($font-size-h3, 500);
   padding-bottom: $spacing-md;
 }
 
@@ -89,7 +89,7 @@ h3 { @include heading-rubik($font-size-h3, 400); }
 // Styling for cards on posts
 .blog-post h2,
 .work-post h2 {
-  @include heading-rubik($font-size-h2, 700, 1.15, 0);
+  @include heading-rubik($font-size-h2, 500, 1.15, 0);
   padding-bottom: $spacing-sm;
 }
 
@@ -102,7 +102,7 @@ h3 { @include heading-rubik($font-size-h3, 400); }
 
 // About fact cell headings
 .about-fact-cell > h4 {
-  @include heading-rubik($font-size-h4, 700, 1.25);
+  @include heading-rubik($font-size-h4, 500, 1.25);
   color: $color-text-brand;
 }
 
