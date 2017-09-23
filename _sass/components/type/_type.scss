@@ -38,7 +38,7 @@ h3 { @include heading-rubik($font-size-h3, 400); }
 
 // Hero text shown in the header
 .hero {
-  @include heading-open($font-size-hero, 600);
+  @include heading-open($font-size-hero, 800);
   letter-spacing: -2px;
   line-height: .95;
   text-transform: uppercase;
@@ -51,7 +51,7 @@ h3 { @include heading-rubik($font-size-h3, 400); }
 .section-heading > h2,
 .section-heading > h3,
 .section-heading > h4 {
-  @include heading-open($font-size-large, 600);
+  @include heading-open($font-size-large, 800);
   letter-spacing: 2px;
   text-transform: uppercase;
 
