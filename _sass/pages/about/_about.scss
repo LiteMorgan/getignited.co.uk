@@ -18,6 +18,10 @@
   @media (min-width: $screen-size-md) {
     @include column-block(2);
   }
+
+  & > .page__icon {
+    width: 140px;
+  }
 }
 
 
@@ -42,5 +46,9 @@
 
     &:nth-child(odd) { @include column-border($color-border); }
     &:nth-child(4n + 1) { @include column-border(none); }
+  }
+
+  & > .page__icon {
+    width: 100px
   }
 }
