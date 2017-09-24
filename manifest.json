@@ -1,5 +1,6 @@
 {
     "name": "getignited",
+    "short_name": "getignited",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
