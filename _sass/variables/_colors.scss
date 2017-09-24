@@ -16,14 +16,15 @@ $color-secondary:          $carnation;
 
 // Something
 $color-background:         $off-white;
+$color-background-shaded:  darken($color-background, 15%);
 $color-background-brand:   $color-primary;
 $color-background-dark:    $bluecharcoal;
 
 $color-text:               $off-black;
-$color-text-weak:          lighten($color-text, 10%);
+$color-text-weak:          lighten($color-text, 15%);
 $color-text-weaker:        lighten($color-text, 24%);
 $color-text-weakest:       lighten($color-text, 32%);
 $color-text-brand:         $color-secondary;
 
-$color-border:             darken($color-background, 8);
-$color-border-dark:        lighten($color-background-dark, 4);
+$color-border:             darken($color-background, 10%);
+$color-border-dark:        lighten($color-background-dark, 5%);
