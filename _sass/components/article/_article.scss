@@ -4,8 +4,8 @@
 
 
 .article-hero {
-  margin-right: -#{$spacing-lg};
-  margin-left:  -#{$spacing-lg};
+  margin-right: -#{$spacing-md};
+  margin-left:  -#{$spacing-md};
 
   @media (min-width: $screen-size-lg) {
     margin-right: 0;
