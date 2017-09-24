@@ -16,12 +16,12 @@ permalink: /about/
 <section>
   <div class="columns">
     <div class="about-bio-cell">
-      <img class="page__icon" src="/images/fedev.svg" alt="Front-end developer">
+      <img class="page__icon" src="/image/about/fedev.svg" alt="Front-end developer">
       <h2>Front-end developer</h2>
       <p>I have 3 years experience working with HTML, CSS and basic Javascript. More recently, I've begun to experiment with ReactJS, and I'm enjoying the possiblities it brings for the web.</p>
     </div>
     <div class="about-bio-cell">
-      <img class="page__icon" src="/images/uxui.svg" alt="UI/UX Designer">
+      <img class="page__icon" src="/image/about/uxui.svg" alt="UI/UX Designer">
       <h2>UI/UX designer</h2>
       <p>I enjoy the process of UI/UX design. I like starting from the building blocks of wireframes and seeing the design come to life for the responsive web. My current weapon of choice is Sketch!</p>
     </div>
@@ -45,7 +45,7 @@ permalink: /about/
   <div class="columns">
     {% for item in site.data.about %}
     <div class="about-fact-cell ta--c">
-      <img class="page__icon" src="/images/about-{{ item.category }}.svg" alt="{{ item.category | capitalize }}">
+      <img class="page__icon" src="/image/about/about-{{ item.category }}.svg" alt="{{ item.category | capitalize }}">
       <h4>{{ item.category | capitalize }}</h4>
       <p class="p-0">{{ item.title | markdownify | remove: '<p>' | remove: '</p>' }}</p>
     </div>
