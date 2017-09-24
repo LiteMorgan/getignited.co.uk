@@ -7,13 +7,6 @@ custom_js:
 <article>
   <section class="article-header">
     <div class="article-hero">
-      <!--<picture>
-        <source media="(min-width: 667px)"
-                srcset="/images/work/{{ page.slug }}/hero-{{ page.slug }}-d.jpg 1x">
-        <source srcset="/images/work/{{ page.slug }}/hero-{{ page.slug }}-m.2x.jpg 1x,
-                        /images/work/{{ page.slug }}/hero-{{ page.slug }}-m.3x.jpg 3x">
-        <img class="article-top__hero-img i--w" src="/images/work/{{ page.slug }}/hero-{{ page.slug }}-d.jpg" alt="">
-      </picture>-->
       <img class="article-top__hero-img i--w" src="/image/work/{{ page.date | date: '%Y-%m-%d' }}-{{ page.title | slugify }}/thumb.{{ page.thumb.format | default: 'png' }}" alt="">
     </div>
     <div class="card card__feature card__feature--article">
