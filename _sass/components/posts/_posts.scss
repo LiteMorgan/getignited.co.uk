@@ -55,6 +55,14 @@
 
 
 .post-image {
+  position: relative;
   display: block;
   width: 100%;
+  padding-bottom: (248 / 441) * 100%;
+  background: $color-background-shaded;
+
+  & > img {
+    position: absolute;
+    width: 100%;
+  }
 }
