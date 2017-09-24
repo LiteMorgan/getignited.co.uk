@@ -28,6 +28,7 @@
 // Define columns for Fact Cells on the About page
 .about-fact-cell {
   @include column-block(2);
+  align-items: center;
   margin-bottom: $spacing-xl;
   @include column-border($color-border);
 
