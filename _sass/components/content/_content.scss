@@ -29,10 +29,12 @@ main {
   }
 
   @media screen and (min-width: $screen-size-lg) {
-    position: absolute;
+    // position: absolute;
+    position: relative;
     top:    0;
-    right:  0;
+    // right:  0;
     bottom: 0;
+    left: $spacing-header-base;
     width: $spacing-body-base;
     padding-top:   ($spacing-xl * 2);
     padding-right: $spacing-lg;
