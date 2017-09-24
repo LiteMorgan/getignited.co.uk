@@ -51,6 +51,14 @@
      js.src = "//connect.facebook.net/en_US/sdk.js";
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
+
+  document.getElementById('facebookShare').onclick = function() {
+    FB.ui({
+      method: 'share',
+      mobile_iframe: true,
+      href: 'https://developers.facebook.com/docs/',
+    }, function(response){});
+  }
 </script>
 
 <script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
