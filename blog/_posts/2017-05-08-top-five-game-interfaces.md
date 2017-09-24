@@ -36,7 +36,7 @@ It's 2am. All the lights are off. You're stealthily making your way through the 
 
 {% include utilities/post-image.html url="dead-space-01.jpg" caption="Isaac shooting at Necromorphs, Dead Space (2008)" source="EA" %}
 
-This was one of the first games were I found myself constantly impressed by the UI. **Dead Space** keeps everything diegetic. The screen is clutter free, and all necessary information not only shares center stage with protagonist Isaac, but is part of the game world. It's as pivotal to the experience as the gameplay and story.
+This was one of the first games where I found myself constantly impressed by the UI. **Dead Space** keeps everything diegetic. The screen is clutter free, and all necessary information not only shares center stage with protagonist Isaac, but is part of the game world. It's as pivotal to the experience as the gameplay and story.
 
 Remaining health lights up along Isaac's spine. Ammunition rounds are projected from Isaac's weapon. The main menu is holographically projected from Isaac's chest, in front of his face. In a survival horror game, that makes a *huge* difference. The player loses the comfort of hitting pause at a jump scare - open your menu in Dead Space, you're likely going to find your head taken off.
 
