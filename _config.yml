@@ -36,6 +36,7 @@ gems:
 default_js:
   - "//cdnjs.cloudflare.com/ajax/libs/lodash.js/4.16.3/lodash.min.js"
   - "/scripts/vendor/picturefill.min.js"
+  - "/scripts/lazyload.js"
 
 # Get consistent pagination links with production
 timezone: "Europe/London"
