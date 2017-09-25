@@ -21,6 +21,7 @@ if (!('IntersectionObserver' in window)) {
   observer = new IntersectionObserver(onIntersection, config);
 
   images.forEach(image => {
+    console.log(image);
     observer.observe(image);
   });
 }
