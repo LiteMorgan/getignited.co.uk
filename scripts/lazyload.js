@@ -20,10 +20,15 @@ if (!('IntersectionObserver' in window)) {
 } else {
   observer = new IntersectionObserver(onIntersection, config);
 
-  images.forEach(image => {
+  for (let i = 0; i < images.length; i++) { 
+    let image = images[i];
+    if (image.classList.contains('js-lazyloaded')) {
+      continue;
+    }
+
     console.log(image);
     observer.observe(image);
-  });
+  }
 }
 
 
@@ -48,9 +53,10 @@ function preloadImage(image) {
 
 
 function loadImagesImmediately(images) {
-  forEach(image => {
+  for (let i = 0; i < images.length; i++) {
+    let image = images[i];
     preloadImage(image);
-  });
+  }
 };
 
 
@@ -69,15 +75,17 @@ function onIntersection(entries) {
     observer.disconnect();
   }
   // Loop through the entries
-  entries.forEach(entry => {
+  for (let i = 0; i < entries.length; i++) {
+    let entry = entries[i];
     // Are we in viewport?
     if (entry.intersectionRatio > 0) {
+      imageCount--;
 
       // Stop watching and load the image
       observer.unobserve(entry.target);
       preloadImage(entry.target);
     }
-  });
+  }
 };
 
 
