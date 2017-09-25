@@ -1,6 +1,9 @@
-<div class="image-item{% if include.size %} image-item--{{ include.size }}{% endif %}">
-  <img class="article-image i--w js-lazyload" 
-       data-src="/image/work/{{ page.date | date: '%Y-%m-%d' }}-{{ page.title | slugify }}/{{ include.filename }}"
-       {% if include.height %} data-height="{{ include.height }}" {% endif %}
-       alt="{{ include.alt }}">
+<div class="image-wrapper{% if include.column %} image-wrapper--{{ include.column }}{% endif %}">
+  <div class="image-item">
+    <img class="article-image i--w js-lazyload js-autosize" 
+         data-src="/image/work/{{ page.date | date: '%Y-%m-%d' }}-{{ page.title | slugify }}/{{ include.filename }}"
+         {% if include.height %} data-height="{{ include.height }}" {% endif %}
+         {% if include.width %} data-width="{{ include.width }}" {% endif %}
+         alt="{{ include.alt }}">
+  </div>
 </div>

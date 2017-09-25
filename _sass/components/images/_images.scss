@@ -4,6 +4,7 @@ $image-gutter:   0;
 
 
 .image-block {
+  position: relative;
   display: block;
   margin: 0;
   margin-bottom: $image-spacing;
@@ -14,24 +15,19 @@ $image-gutter:   0;
       margin-left:  auto;
     }
   }
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+  }
 }
 
 
-.image-container {
-  //@include column-container($image-gutter);
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
-  justify-content: space-between;
-}
-
-
-.image-item {
-  position: relative;
-  //height: 0;
-  width:  100%;
-  //padding-bottom: 50%;
+.image-wrapper {
+  width: 100%;
   margin-bottom: $image-spacing;
   background: $color-background-shaded;
 
@@ -48,21 +44,28 @@ $image-gutter:   0;
     @media (min-width: $screen-size-lg) { width: calc(50% - #{$image-columns}); }
     @media (min-width: $screen-size-xl) { width: calc(33.33333% - #{$image-columns}); }
   }
+}
 
-  // @include column-block(1, $image-columns);
-  // margin-bottom: $image-spacing;
 
-  // &--half {
-  //   @include column-block(2, $image-columns);
-  // }
+.image-item {
+  position: relative;
+  height: 0;
+  width:  100%;
+  background: $color-background-shaded;
 
-  // &--third {
-  //   @include column-block(2, $image-columns);
+  &--half {
+    @media (min-width: $screen-size-sm) {
+      width: calc(50% - #{$image-columns});
+    }
+  }
 
-  //   @media (min-width: $screen-size-sm) { @include column-block(3, $image-columns); }
-  //   @media (min-width: $screen-size-lg) { @include column-block(2, $image-columns); }
-  //   @media (min-width: $screen-size-xl) { @include column-block(3, $image-columns); }
-  // }
+  &--third {
+    width: calc(50% - #{$image-columns});
+
+    @media (min-width: $screen-size-sm) { width: calc(33.33333% - #{$image-columns}); }
+    @media (min-width: $screen-size-lg) { width: calc(50% - #{$image-columns}); }
+    @media (min-width: $screen-size-xl) { width: calc(33.33333% - #{$image-columns}); }
+  }
 }
 
 
@@ -79,6 +82,7 @@ $image-gutter:   0;
 
 
 .article-image {
+  position: absolute;
   background-color: $color-background-shaded;
   opacity: 0;
   transition: opacity .2s ease-in-out .2s;
