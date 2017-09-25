@@ -3,6 +3,79 @@ $image-columns: ($image-spacing / 2);
 $image-gutter:   0;
 
 
+.atcl-image {
+  position: relative;
+  display: block;
+  margin:        0;
+  margin-bottom: $spacing-lg;
+
+  &--small {
+    @media (min-width: $screen-size-md) {
+      width: 75%;
+      margin-left:  auto;
+    }
+  }
+
+  &__flex {
+    display:         flex;
+    flex-wrap:       wrap;
+    justify-content: space-between;
+  }
+
+  &__wrapper {
+    width: 100%;
+    margin-top: $spacing-md;
+
+    &--half {
+      @media (min-width: $screen-size-sm) {
+        width: calc(50% - #{$image-columns});
+      }
+    }
+
+    &--third {
+      width: calc(50% - #{$image-columns});
+
+      @media (min-width: $screen-size-sm) { width: calc(33.33333% - #{$image-columns}); }
+      @media (min-width: $screen-size-lg) { width: calc(50% - #{$image-columns}); }
+      @media (min-width: $screen-size-xl) { width: calc(33.33333% - #{$image-columns}); }
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: block;
+    height: 0;
+    width:  100%;
+    background: $color-background-shaded;
+
+    & > img {
+      position: absolute;
+      opacity: 0;
+      transition: opacity .2s ease-in-out .2s;
+
+      &.image--loaded {
+        opacity: 1;
+      }
+    }
+  }
+
+  & > figcaption {
+    position: relative;
+    padding-top: $spacing-sm;
+    color:       $color-text-weak;
+    font-family: $font-family-sans-serif;
+    font-size:   $font-size-small;
+    font-weight: 400;
+    text-align:  right;
+    z-index: 100;
+
+    & .caption-source {
+      color: $color-text-weakest;
+    }
+  }
+}
+
+
 .image-block {
   position: relative;
   display: block;
