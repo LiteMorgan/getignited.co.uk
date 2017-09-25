@@ -2,9 +2,14 @@
   <div class="image-container">
     <div class="image-item">
     {% if include.type == 'gif' %}
-    <div data-id="{{ include.url }}" class="gfyitem"></div>
+      <div data-id="{{ include.url }}" class="gfyitem"></div>
     {% else %}
-      <img class="i--w js-lazy-load-image" data-src="/image/blog/{{ page.date | date: '%Y-%m-%d' }}-{{ page.title | slugify }}/{{ include.url }}" alt="{{ include.caption }}">
+      <img class="article-image i--w js-lazyload" 
+           data-src="/image/blog/{{ page.date | date: '%Y-%m-%d' }}-{{ page.title | slugify }}/{{ include.url }}" 
+           {% if include.height %} data-height="{{ include.height }}" {% endif %} 
+           {% if include.width %} data-width="{{ include.width }}" {% endif %} 
+           alt="{{ include.caption }}"
+      >
     {% endif %}
     </div>
   </div>

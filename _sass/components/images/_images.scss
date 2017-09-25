@@ -1,6 +1,6 @@
 $image-spacing:  $spacing-md;
 $image-columns: ($image-spacing / 2);
-$image-gutter:  ($image-spacing / 2);
+$image-gutter:   0;
 
 
 .image-block {
@@ -18,33 +18,73 @@ $image-gutter:  ($image-spacing / 2);
 
 
 .image-container {
-  @include column-container($image-gutter);
+  //@include column-container($image-gutter);
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-between;
 }
 
 
 .image-item {
-
-  @include column-block(1, $image-columns);
-  padding-bottom: $image-spacing;
+  position: relative;
+  //height: 0;
+  width:  100%;
+  //padding-bottom: 50%;
+  margin-bottom: $image-spacing;
+  background: $color-background-shaded;
 
   &--half {
-    @include column-block(2, $image-columns);
+    @media (min-width: $screen-size-sm) {
+      width: calc(50% - #{$image-columns});
+    }
   }
 
   &--third {
-    @include column-block(2, $image-columns);
+    width: calc(50% - #{$image-columns});
 
-    @media (min-width: $screen-size-sm) {
-      @include column-block(3, $image-columns);
-    }
+    @media (min-width: $screen-size-sm) { width: calc(33.33333% - #{$image-columns}); }
+    @media (min-width: $screen-size-lg) { width: calc(50% - #{$image-columns}); }
+    @media (min-width: $screen-size-xl) { width: calc(33.33333% - #{$image-columns}); }
+  }
 
-    @media (min-width: $screen-size-lg) {
-      @include column-block(2, $image-columns);
-    }
+  // @include column-block(1, $image-columns);
+  // margin-bottom: $image-spacing;
 
-    @media (min-width: $screen-size-xl) {
-      @include column-block(3, $image-columns);
-    }
+  // &--half {
+  //   @include column-block(2, $image-columns);
+  // }
+
+  // &--third {
+  //   @include column-block(2, $image-columns);
+
+  //   @media (min-width: $screen-size-sm) { @include column-block(3, $image-columns); }
+  //   @media (min-width: $screen-size-lg) { @include column-block(2, $image-columns); }
+  //   @media (min-width: $screen-size-xl) { @include column-block(3, $image-columns); }
+  // }
+}
+
+
+.post-image {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  transition: opacity .2s ease-in-out .2s;
+
+  &.image--loaded {
+    opacity: 1;
+  }
+}
+
+
+.article-image {
+  background-color: $color-background-shaded;
+  opacity: 0;
+  transition: opacity .2s ease-in-out .2s;
+
+  &.image--loaded {
+    opacity: 1;
   }
 }
 

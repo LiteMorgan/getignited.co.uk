@@ -1,9 +1,9 @@
 // LazyLoad
-// Based on lazyload.js by deanhume
+// Based on lazyload.js by @deanhume
 // https://github.com/deanhume/lazy-observer-load/blob/master/lazy-load.js
 
 // Get all of the image that are marked up to lazy load
-const images = document.querySelectorAll('.js-lazy-load-image');
+const images = document.querySelectorAll('.js-lazyload');
 const config = {
   // If the image gets within 50px in the Y axis, start the download.
   rootMargin: '50px 0px',
@@ -26,7 +26,6 @@ if (!('IntersectionObserver' in window)) {
       continue;
     }
 
-    console.log(image);
     observer.observe(image);
   }
 }
@@ -90,8 +89,8 @@ function onIntersection(entries) {
 
 
 function applyImage(img, src) {
-  img.classList.remove('js-lazy-load-image');
+  img.classList.remove('js-lazyload');
   img.classList.add('js-lazyloaded');
   img.src = src;
-  img.classList.add('post-image--loaded');
+  img.classList.add('image--loaded');
 };
