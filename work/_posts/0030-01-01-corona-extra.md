@@ -14,41 +14,57 @@ thumb:
   format:   jpg
   alt:      text
 
+images:
+  - caption:     Early concepts for page layouts and user flow.
+    items:
+      - src:     wireframe-sketches-1
+        format:  jpg
+        height:  1156
+        alt:     
+      - src:     wireframe-sketches-2
+        format:  jpg
+        size:    half
+        height:  1156
+        alt:     
+      - src:     wireframe-sketches-3
+        format:  jpg
+        size:    half
+        height:  1156
+        alt:     
+  - caption:     Responsive, interactive wireframes created with Axure
+    items:
+      - src:     axure-wireframes
+        format:  jpg
+        height:  2469
+        alt:     
+  - items:
+      - src:     final-mobile-screens
+        format:  jpg
+        height:  722
+  - items:
+      - src:     final-desktop-screen
+        format:  jpg
+        height:  864
+        alt:     
+
 published:    true
 hidden:       true
 
 sitelink:  http://coronaextra.co.uk
 ---
-{% capture pageslug %}{{ page.slug }}{% endcapture %}
-
 Part of a brief to develop the UK identity for *Corona*, and introduce the brand lifestyle - ‘La Vida Corona’. Users where given the chance to submit their ideas for a bucket list of experiences that had to be seen.
 
 To inspire users, a gallery of featured moments was added. This provided some interactivity, to both discover more about the moment, and why it was bucket list worthy.
 
-<figure class="image-block">
-  <div class="image-block__content">
-    {% include utilities/work-image.html filename="wireframe-sketches-1.jpg" height="1156" alt="" %}
-    {% include utilities/work-image.html filename="wireframe-sketches-2.jpg" height="1156" alt="" column="half" %}
-    {% include utilities/work-image.html filename="wireframe-sketches-3.jpg" height="1156" alt="" column="half" %}
-  </div>
-  {% include utilities/image-caption.html caption="Early concepts for page layouts and user flow" %}
-</figure>
+{% assign images = page.images[0] %}
+{% include utilities/image.html %}
 
-<figure class="image-block">
-  <div class="image-block__content">
-    {% include utilities/work-image.html filename="axure-wireframes.jpg" height="2469" alt="" %}
-  </div>
-  {% include utilities/image-caption.html caption="Responsive, interactive wireframes created with Axure" %}
-</figure>
+{% assign images = page.images[1] %}
+{% include utilities/image.html %}
 
-<figure class="image-block">
-  <div class="image-block__content">
-    {% include utilities/work-image.html filename="final-mobile-screens.jpg" height="722" alt="" %}
-  </div>
-</figure>
+{% assign images = page.images[2] %}
+{% include utilities/image.html %}
 
-<figure class="image-block">
-  <div class="image-block__content">
-    {% include utilities/work-image.html filename="final-desktop-screen.jpg" height="864" alt="" %}
-  </div>
-</figure>
+{% assign images = page.images[3] %}
+{% include utilities/image.html %}
+

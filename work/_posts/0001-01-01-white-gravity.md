@@ -13,6 +13,75 @@ thumb:
   format:   png
   alt:      text
 
+images:
+  - caption:     Logo concepts and explorations.
+    items:
+      - src:     logo-concept-1
+        format:  png
+        size:    third
+        width:   620
+        height:  620
+        alt:     
+      - src:     logo-concept-2
+        format:  png
+        size:    third
+        width:   620
+        height:  620
+        alt:     
+      - src:     logo-concept-3
+        format:  png
+        size:    third
+        width:   620
+        height:  620
+        alt:     
+      - src:     logo-concept-4
+        format:  png
+        size:    third
+        width:   620
+        height:  620
+        alt:     
+      - src:     logo-concept-5
+        format:  png
+        size:    third
+        width:   620
+        height:  620
+        alt:     
+      - src:     logo-concept-6
+        format:  png
+        size:    third
+        width:   620
+        height:  620
+        alt:     
+      - src:     logo-concept-7
+        format:  png
+        size:    third
+        width:   620
+        height:  620
+        alt:     
+      - src:     logo-concept-8
+        format:  png
+        size:    third
+        width:   620
+        height:  620
+        alt:     
+      - src:     logo-concept-9
+        format:  png
+        size:    third
+        width:   620
+        height:  620
+        alt:     
+  - items:
+      - src:     final-logo
+        format:  png
+        height:  538
+        alt:     
+  - caption:     The logo in use on a Twitch stream.
+    items:
+      - src:     twitch-mockup
+        format:  jpg
+        height:  1046
+        alt:     
+
 published:    true
 hidden:       true
 ---
@@ -24,33 +93,13 @@ My aim with the logo was to make use of mixed fonts. Ideally a serif and sans-se
 
 To incorporate the fantasty aspect of the game, I made use of Eorzean-type fonts, based on the game's primary written language, and expertly recreated by [dachoutom](http://dachoutom.org/ffxiv/fonts.html).
 
-<figure class="image-block">
-  <div class="image-block__content">
-    {% include utilities/work-image.html filename="logo-concept-1.png" width="620" height="620" alt="" column="third" %}
-    {% include utilities/work-image.html filename="logo-concept-2.png" width="620" height="620" alt="" column="third" %}
-    {% include utilities/work-image.html filename="logo-concept-3.png" width="620" height="620" alt="" column="third" %}
-    {% include utilities/work-image.html filename="logo-concept-4.png" width="620" height="620" alt="" column="third" %}
-    {% include utilities/work-image.html filename="logo-concept-5.png" width="620" height="620" alt="" column="third" %}
-    {% include utilities/work-image.html filename="logo-concept-6.png" width="620" height="620" alt="" column="third" %}
-    {% include utilities/work-image.html filename="logo-concept-7.png" width="620" height="620" alt="" column="third" %}
-    {% include utilities/work-image.html filename="logo-concept-8.png" width="620" height="620" alt="" column="third" %}
-    {% include utilities/work-image.html filename="logo-concept-9.png" width="620" height="620" alt="" column="third" %}
-  </div>
-  {% include utilities/image-caption.html caption="Logo concepts and explorations" %}
-</figure>
+{% assign images = page.images[0] %}
+{% include utilities/image.html %}
 
 The final design was chosen by user vote on the group's private forums, and from there made available to be implemented into member Twitch streams.
 
-<figure class="image-block">
-  <div class="image-block__content">
-    {% include utilities/work-image.html filename="final-logo.png" height="538" alt="" %}
-  </div>
-</figure>
+{% assign images = page.images[1] %}
+{% include utilities/image.html %}
 
-<figure class="image-block">
-  <div class="image-block__content">
-    {% include utilities/work-image.html filename="twitch-mockup.jpg" height="1046" alt="" %}
-  </div>
-  {% include utilities/image-caption.html caption="The logo in use on a Twitch stream" %}
-</figure>
-
+{% assign images = page.images[2] %}
+{% include utilities/image.html %}
