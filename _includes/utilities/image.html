@@ -1,0 +1,27 @@
+{% assign imagesLength = images.items.size %}
+
+<figure class="atcl-image{% if include.small %} atcl-image--small{% endif %}">
+  {% if imagesLength > 1 %}<div class="atcl-image__flex">{% endif %}
+  {% for item in images.items %}
+    {% if imagesLength > 1 %}<div class="atcl-image__wrapper{% if item.size %} atcl-image__wrapper--{{ item.size }}{% endif %}">{% endif %}
+      {% if item.format == 'gif' %}
+      <div data-id="{{ item.src }}" class="gfyitem"></div>
+      {% else %}
+      <span class="atcl-image__item">
+          <img class="i--w js-lazyload js-autosize"
+               data-src="/image/{{ page.layout }}/{{ page.date | date: '%Y-%m-%d' }}-{{ page.title | slugify }}/{{ item.src }}.{{ item.format }}"
+               {% if item.height %} data-height="{{ item.height }}" {% endif %} 
+               {% if item.width %} data-width="{{ item.width }}" {% endif %}
+               {% if item.alt %} alt="{{ item.alt }}" {% endif %}
+          />
+      </span>
+      {% endif %}
+    {% if imagesLength > 1 %}</div>{% endif %}
+  {% endfor %}
+  {% if imagesLength > 1 %}</div>{% endif %}
+  {% if images.caption %}
+    <figcaption>
+      <span>{{ images.caption }} {% if images.captionSrc %}<span class="caption-source"> | {% if images.captionURL %}<a href="{{ images.captionURL }}" target="_blank">{{ images.captionSrc }}</a>{% else %}{{ images.captionSrc }}{% endif %}</span>{% endif %}</span>
+    </figcaption>
+  {% endif %}
+</figure>
