@@ -23,8 +23,8 @@ Chris Baker got in touch with a brief to create branding for a personal podcast,
 <figure class="image-block">
   <div class="image-container">
     {% include utilities/work-image.html filename="early-concepts.jpg" alt="" %}
-    {% include utilities/work-image.html filename="winning-idea.jpg" alt="" css="image-item--half" %}
-    {% include utilities/work-image.html filename="expanding-the-idea.jpg" alt="" css="image-item--half" %}
+    {% include utilities/work-image.html filename="winning-idea.jpg" alt="" size="half" %}
+    {% include utilities/work-image.html filename="expanding-the-idea.jpg" alt="" size="half" %}
   </div>
 </figure>
 

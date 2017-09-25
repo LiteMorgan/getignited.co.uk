@@ -1,4 +1,4 @@
-<div class="image-item{% if include.css %} {{ include.css }}{% endif %}">
+<div class="image-item{% if include.size %} image-item--{{ include.size }}{% endif %}">
   <img class="article-image i--w js-lazyload" 
        data-src="/image/work/{{ page.date | date: '%Y-%m-%d' }}-{{ page.title | slugify }}/{{ include.filename }}"
        {% if include.height %} data-height="{{ include.height }}" {% endif %}

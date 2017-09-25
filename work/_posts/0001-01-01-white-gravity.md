@@ -26,15 +26,15 @@ To incorporate the fantasty aspect of the game, I made use of Eorzean-type fonts
 
 <figure class="image-block">
   <div class="image-container">
-    {% include utilities/work-image.html filename="logo-concept-1.png" alt="" css="image-item--third" %}
-    {% include utilities/work-image.html filename="logo-concept-2.png" alt="" css="image-item--third" %}
-    {% include utilities/work-image.html filename="logo-concept-3.png" alt="" css="image-item--third" %}
-    {% include utilities/work-image.html filename="logo-concept-4.png" alt="" css="image-item--third" %}
-    {% include utilities/work-image.html filename="logo-concept-5.png" alt="" css="image-item--third" %}
-    {% include utilities/work-image.html filename="logo-concept-6.png" alt="" css="image-item--third" %}
-    {% include utilities/work-image.html filename="logo-concept-7.png" alt="" css="image-item--third" %}
-    {% include utilities/work-image.html filename="logo-concept-8.png" alt="" css="image-item--third" %}
-    {% include utilities/work-image.html filename="logo-concept-9.png" alt="" css="image-item--third" %}
+    {% include utilities/work-image.html filename="logo-concept-1.png" alt="" size="third" %}
+    {% include utilities/work-image.html filename="logo-concept-2.png" alt="" size="third" %}
+    {% include utilities/work-image.html filename="logo-concept-3.png" alt="" size="third" %}
+    {% include utilities/work-image.html filename="logo-concept-4.png" alt="" size="third" %}
+    {% include utilities/work-image.html filename="logo-concept-5.png" alt="" size="third" %}
+    {% include utilities/work-image.html filename="logo-concept-6.png" alt="" size="third" %}
+    {% include utilities/work-image.html filename="logo-concept-7.png" alt="" size="third" %}
+    {% include utilities/work-image.html filename="logo-concept-8.png" alt="" size="third" %}
+    {% include utilities/work-image.html filename="logo-concept-9.png" alt="" size="third" %}
   </div>
   {% include utilities/image-caption.html caption="Logo concepts and explorations" %}
 </figure>

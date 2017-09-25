@@ -28,8 +28,8 @@ To inspire users, a gallery of featured moments was added. This provided some in
 <figure class="image-block">
   <div class="image-container">
     {% include utilities/work-image.html filename="wireframe-sketches-1.jpg" alt="" %}
-    {% include utilities/work-image.html filename="wireframe-sketches-2.jpg" alt="" css="image-item--half" %}
-    {% include utilities/work-image.html filename="wireframe-sketches-3.jpg" alt="" css="image-item--half" %}
+    {% include utilities/work-image.html filename="wireframe-sketches-2.jpg" alt="" size="half" %}
+    {% include utilities/work-image.html filename="wireframe-sketches-3.jpg" alt="" size="half" %}
   </div>
   {% include utilities/image-caption.html caption="Early concepts for page layouts and user flow" %}
 </figure>
