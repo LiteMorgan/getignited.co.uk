@@ -1,16 +1,18 @@
-<figure class="image-block{% if include.small %} size-small{% endif %}">
-  <div class="image-container">
-    <div class="image-item">
-    {% if include.type == 'gif' %}
-      <div data-id="{{ include.url }}" class="gfyitem"></div>
-    {% else %}
-      <img class="article-image i--w js-lazyload" 
-           data-src="/image/blog/{{ page.date | date: '%Y-%m-%d' }}-{{ page.title | slugify }}/{{ include.url }}" 
-           {% if include.height %} data-height="{{ include.height }}" {% endif %} 
-           {% if include.width %} data-width="{{ include.width }}" {% endif %} 
-           alt="{{ include.caption }}"
-      >
-    {% endif %}
+<figure class="image-block{% if include.small %} image-block--small{% endif %}">
+  <div class="image-block__content">
+    <div class="image-wrapper">
+      {% if include.type == 'gif' %}
+        <div data-id="{{ include.url }}" class="gfyitem"></div>
+      {% else %}
+        <div class="image-item">
+          <img class="article-image i--w js-lazyload js-autosize" 
+               data-src="/image/blog/{{ page.date | date: '%Y-%m-%d' }}-{{ page.title | slugify }}/{{ include.url }}" 
+               {% if include.height %} data-height="{{ include.height }}" {% endif %} 
+               {% if include.width %} data-width="{{ include.width }}" {% endif %} 
+               alt="{{ include.caption }}"
+          >
+        </div>
+      {% endif %}
     </div>
   </div>
   {% if include.caption %}
