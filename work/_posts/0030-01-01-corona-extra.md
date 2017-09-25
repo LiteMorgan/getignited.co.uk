@@ -26,29 +26,29 @@ Part of a brief to develop the UK identity for *Corona*, and introduce the brand
 To inspire users, a gallery of featured moments was added. This provided some interactivity, to both discover more about the moment, and why it was bucket list worthy.
 
 <figure class="image-block">
-  <div class="image-container">
-    {% include utilities/work-image.html filename="wireframe-sketches-1.jpg" alt="" %}
-    {% include utilities/work-image.html filename="wireframe-sketches-2.jpg" alt="" size="half" %}
-    {% include utilities/work-image.html filename="wireframe-sketches-3.jpg" alt="" size="half" %}
+  <div class="image-block__content">
+    {% include utilities/work-image.html filename="wireframe-sketches-1.jpg" height="1156" alt="" %}
+    {% include utilities/work-image.html filename="wireframe-sketches-2.jpg" height="1156" alt="" column="half" %}
+    {% include utilities/work-image.html filename="wireframe-sketches-3.jpg" height="1156" alt="" column="half" %}
   </div>
   {% include utilities/image-caption.html caption="Early concepts for page layouts and user flow" %}
 </figure>
 
 <figure class="image-block">
-  <div class="image-container">
-    {% include utilities/work-image.html filename="axure-wireframes.jpg" alt="" %}
+  <div class="image-block__content">
+    {% include utilities/work-image.html filename="axure-wireframes.jpg" height="2469" alt="" %}
   </div>
   {% include utilities/image-caption.html caption="Responsive, interactive wireframes created with Axure" %}
 </figure>
 
 <figure class="image-block">
-  <div class="image-container">
-    {% include utilities/work-image.html filename="final-mobile-screens.jpg" alt="" %}
+  <div class="image-block__content">
+    {% include utilities/work-image.html filename="final-mobile-screens.jpg" height="722" alt="" %}
   </div>
 </figure>
 
 <figure class="image-block">
-  <div class="image-container">
-    {% include utilities/work-image.html filename="final-desktop-screen.jpg" alt="" %}
+  <div class="image-block__content">
+    {% include utilities/work-image.html filename="final-desktop-screen.jpg" height="864" alt="" %}
   </div>
 </figure>

@@ -26,15 +26,15 @@ Whilst playing *Avengers Academy*, I had some issues with the game's UI for even
 My solution was to build a responsive, web-based tracker, allowing players to tick off what collectables they had, and find out how many more they needed.
 
 <figure class="image-block">
-  <div class="image-container">
-    {% include utilities/work-image.html filename="v1-material-display-desktop.jpg" alt="" %}
+  <div class="image-block__content">
+    {% include utilities/work-image.html filename="v1-material-display-desktop.jpg" height="653" alt="" %}
   </div>
   {% include utilities/image-caption.html caption="The full capacity v1 Materials list on desktop" %}
 </figure>
 
 <figure class="image-block">
-  <div class="image-container">
-    {% include utilities/work-image.html filename="v1-mobile-display.jpg" alt="" %}
+  <div class="image-block__content">
+    {% include utilities/work-image.html filename="v1-mobile-display.jpg" height="896" alt="" %}
   </div>
 </figure>
 
@@ -43,15 +43,15 @@ The first release aimed to match the in-game UI for viewing remaining materials.
 To remedy this for the next event, I switched to a card-based system, and added a fixed sidebar containing all remaining totals.
 
 <figure class="image-block">
-  <div class="image-container">
-    {% include utilities/work-image.html filename="v2-desktop-display.jpg" alt="" %}
+  <div class="image-block__content">
+    {% include utilities/work-image.html filename="v2-desktop-display.jpg" height="1046" alt="" %}
   </div>
   {% include utilities/image-caption.html caption="The rejuvenated v2 of the Tracker" %}
 </figure>
 
 <figure class="image-block">
-  <div class="image-container">
-    {% include utilities/work-image.html filename="v2-mobile-display.jpg" alt="" %}
+  <div class="image-block__content">
+    {% include utilities/work-image.html filename="v2-mobile-display.jpg" height="896" alt="" %}
   </div>
 </figure>
 

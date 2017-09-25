@@ -25,16 +25,16 @@ My aim with the logo was to make use of mixed fonts. Ideally a serif and sans-se
 To incorporate the fantasty aspect of the game, I made use of Eorzean-type fonts, based on the game's primary written language, and expertly recreated by [dachoutom](http://dachoutom.org/ffxiv/fonts.html).
 
 <figure class="image-block">
-  <div class="image-container">
-    {% include utilities/work-image.html filename="logo-concept-1.png" alt="" size="third" %}
-    {% include utilities/work-image.html filename="logo-concept-2.png" alt="" size="third" %}
-    {% include utilities/work-image.html filename="logo-concept-3.png" alt="" size="third" %}
-    {% include utilities/work-image.html filename="logo-concept-4.png" alt="" size="third" %}
-    {% include utilities/work-image.html filename="logo-concept-5.png" alt="" size="third" %}
-    {% include utilities/work-image.html filename="logo-concept-6.png" alt="" size="third" %}
-    {% include utilities/work-image.html filename="logo-concept-7.png" alt="" size="third" %}
-    {% include utilities/work-image.html filename="logo-concept-8.png" alt="" size="third" %}
-    {% include utilities/work-image.html filename="logo-concept-9.png" alt="" size="third" %}
+  <div class="image-block__content">
+    {% include utilities/work-image.html filename="logo-concept-1.png" width="620" height="620" alt="" column="third" %}
+    {% include utilities/work-image.html filename="logo-concept-2.png" width="620" height="620" alt="" column="third" %}
+    {% include utilities/work-image.html filename="logo-concept-3.png" width="620" height="620" alt="" column="third" %}
+    {% include utilities/work-image.html filename="logo-concept-4.png" width="620" height="620" alt="" column="third" %}
+    {% include utilities/work-image.html filename="logo-concept-5.png" width="620" height="620" alt="" column="third" %}
+    {% include utilities/work-image.html filename="logo-concept-6.png" width="620" height="620" alt="" column="third" %}
+    {% include utilities/work-image.html filename="logo-concept-7.png" width="620" height="620" alt="" column="third" %}
+    {% include utilities/work-image.html filename="logo-concept-8.png" width="620" height="620" alt="" column="third" %}
+    {% include utilities/work-image.html filename="logo-concept-9.png" width="620" height="620" alt="" column="third" %}
   </div>
   {% include utilities/image-caption.html caption="Logo concepts and explorations" %}
 </figure>
@@ -42,14 +42,14 @@ To incorporate the fantasty aspect of the game, I made use of Eorzean-type fonts
 The final design was chosen by user vote on the group's private forums, and from there made available to be implemented into member Twitch streams.
 
 <figure class="image-block">
-  <div class="image-container">
-    {% include utilities/work-image.html filename="final-logo.png" alt="" %}
+  <div class="image-block__content">
+    {% include utilities/work-image.html filename="final-logo.png" height="538" alt="" %}
   </div>
 </figure>
 
 <figure class="image-block">
-  <div class="image-container">
-    {% include utilities/work-image.html filename="twitch-mockup.jpg" alt="" %}
+  <div class="image-block__content">
+    {% include utilities/work-image.html filename="twitch-mockup.jpg" height="1046" alt="" %}
   </div>
   {% include utilities/image-caption.html caption="The logo in use on a Twitch stream" %}
 </figure>
