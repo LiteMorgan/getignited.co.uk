@@ -1,3 +1,7 @@
+// LazyLoad
+// Based on lazyload.js by deanhume
+// https://github.com/deanhume/lazy-observer-load/blob/master/lazy-load.js
+
 // Get all of the image that are marked up to lazy load
 const images = document.querySelectorAll('.js-lazy-load-image');
 const config = {
@@ -77,6 +81,8 @@ function onIntersection(entries) {
 
 
 function applyImage(img, src) {
-  img.classList.add('js-lazy-load-image--handled');
+  img.classList.remove('js-lazy-load-image');
+  img.classList.add('js-lazyloaded');
   img.src = src;
-}
+  img.classList.add('post-image--loaded');
+};

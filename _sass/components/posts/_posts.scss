@@ -54,15 +54,23 @@
 }
 
 
-.post-image {
+.post-image-wrapper {
   position: relative;
   display: block;
   width: 100%;
   padding-bottom: (248 / 441) * 100%;
   background: $color-background-shaded;
+  backface-visibility: hidden;
+}
 
-  & > img {
-    position: absolute;
-    width: 100%;
+
+.post-image {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  transition: opacity .2s ease-in-out .2s;
+
+  &--loaded {
+    opacity: 1;
   }
 }

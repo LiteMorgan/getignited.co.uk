@@ -11,8 +11,8 @@
 {% assign format = include.post.thumb.format %}
 
 <article class="{{ type }}-post{% if feature %} feature-post{% endif %}">
-  <a class="post-image" href="{{ url | relative_url }}" title="{{ title }}" rel="bookmark">
-    <img class="i--w js-lazy-load-image" data-src="/image/{{ type }}/{{ post.date | date: '%Y-%m-%d' }}-{{ title | slugify }}/thumb.{{ format | default: 'png' }}" alt="">
+  <a class="post-image-wrapper" href="{{ url | relative_url }}" title="{{ title }}" rel="bookmark">
+    <img class="post-image i--w js-lazy-load-image" data-src="/image/{{ type }}/{{ post.date | date: '%Y-%m-%d' }}-{{ title | slugify }}/thumb.{{ format | default: 'png' }}" alt="">
   </a>
   <div class="card{% if feature %} card__feature card-feature{% endif %}">
     <a class="card__link" href="{{ url | relative_url }}" title="{{ title }}" rel="bookmark">
