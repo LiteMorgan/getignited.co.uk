@@ -1,7 +1,8 @@
 ---
-layout: blog
-title:  Top five game interfaces
-date:   2017-05-08
+layout:  blog
+title:   Top five game interfaces
+slug:    top-five-game-interfaces
+date:    2017-05-08
 summary: My short list for inspirational game UIs.
 tags: 
   - User Interface

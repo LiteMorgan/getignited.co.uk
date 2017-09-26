@@ -1,7 +1,8 @@
 ---
-layout: blog
-title:  Hello World!
-date:   2017-05-01
+layout:  blog
+title:   Hello World!
+slug:    hello-world
+date:    2017-05-01
 summary: The magic words that start every website in development.
 tags:
   - Site

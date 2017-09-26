@@ -4,7 +4,7 @@ title:        Life Beyond
 summary: 
   Branding for a web podcast
 year:         2015
-slug:         lifebeyond
+slug:         life-beyond
 permalink:    /work/life-beyond/
 tags:
   - Branding

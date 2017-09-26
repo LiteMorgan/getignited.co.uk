@@ -4,7 +4,7 @@ title:        White Gravity
 summary:      
   Branding for a <em>Final Fantasy XIV</em> Free Company
 year:         2015
-slug:         whitegravity
+slug:         white-gravity
 permalink:    /work/white-gravity/
 tags:
   - Branding

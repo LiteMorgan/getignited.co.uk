@@ -3,7 +3,7 @@ layout:       work
 title:        Avengers Academy Tracker
 summary:      Tackling UI problems in <em>Avengers Academy</em> with a streamlined tracker
 year:         2016
-slug:         avengersacademy
+slug:         avengers-academy-tracker
 permalink:    /work/avengers-academy-tracker/
 tags:
   - UX

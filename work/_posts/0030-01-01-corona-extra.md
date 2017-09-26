@@ -4,7 +4,7 @@ title:        Corona Extra
 summary: 
   Introducing ‘La Vida Corona’ to Corona drinkers in the UK
 year:         2016
-slug:         coronaextra
+slug:         corona-extra
 permalink:    /work/corona-extra/
 tags:
   - UX
