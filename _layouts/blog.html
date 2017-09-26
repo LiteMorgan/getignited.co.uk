@@ -8,7 +8,7 @@ custom_js:
 <article>
   <section class="article-header">
     <div class="article-hero">
-      <img class="article-top__hero-img i--w" src="/image/blog/{{ page.date | date: '%Y-%m-%d' }}-{{ page.title | slugify }}/thumb.{{ page.thumb.format | default: 'png' }}" alt="">
+      <img class="article-top__hero-img i--w" src="/image/blog/{{ page.date | date: '%Y-%m-%d' }}-{{ page.slug }}/thumb.{{ page.thumb.format | default: 'png' }}" alt="">
     </div>
     <div class="card card__feature card__feature--article">
       <h1 class="heading-primary">{{ page.title }}</h1>
