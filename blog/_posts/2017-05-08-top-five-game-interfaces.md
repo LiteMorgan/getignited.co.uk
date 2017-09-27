@@ -7,6 +7,12 @@ summary: My short list for inspirational game UIs.
 tags: 
   - User Interface
   - Games
+third_party_js:
+  - /scripts/vendor/gfycat.js
+
+thumb:
+  format:   jpg
+  alt:      text
 
 images:
   - caption:     Isaac shooting at Necromorphs, Dead Space (2008)
@@ -74,13 +80,6 @@ images:
         width:   240
         height:  160
         alt:     
-
-thumb:
-  format:   jpg
-  alt:      text
-
-third_party_js:
-  - /scripts/vendor/gfycat.js
 ---
 Most people start a blog with a top five of films, games or albums. Me? I like to be different!
 

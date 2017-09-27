@@ -7,6 +7,10 @@ summary: The magic words that start every website in development.
 tags:
   - Site
 
+thumb:
+  format:   png
+  alt:      text
+
 images:
   - caption:     UKIE Careers Bar at EGX Rezzed.
     captionSrc:  '@uk_ie'
@@ -17,10 +21,6 @@ images:
         width:   2048
         height:  1536
         alt:     
-
-thumb:
-  format:   png
-  alt:      text
 ---
 Well this feels magical.
 
