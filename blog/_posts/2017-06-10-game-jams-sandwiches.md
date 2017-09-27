@@ -8,6 +8,12 @@ tags:
   - Games
   - Activities
   - Life
+third_party_js:
+  - /scripts/vendor/gfycat.js
+
+thumb:
+  format: jpg
+  alt:    text
 
 images:
   - caption:     Researching salads. 100% related to the game, I promise!
@@ -22,10 +28,16 @@ images:
         format:  jpg
         height:  598
         alt:     
-
-thumb:
-  format: jpg
-  alt:    text 
+  - caption:     The final day ended in a games showcase for everyone.
+    items:
+      - src:     game-demoing
+        format:  jpg
+        height:  1048
+        alt:     
+  - caption:     The never-ending <em>Sandwich Rescue</em> in action!
+    items:
+      - src:     SpanishOrdinaryImago
+        format:  gif
 ---
 Last month I decided to get something off my to-do list and attend a Game Jam. I've been interested in attending one after seeing the resulting creativeness they can lead to, and I wanted to gain a little insight into the development process. And maybe network a little.
 
@@ -53,6 +65,13 @@ Any free time was dedicated to getting character designs finished for some of th
 
 
 ## Show time
+
 The end result by Sunday evening was a very scaled back puzzler. A ball stood in for our bread-faced main character, and magical floating cubes stood in for the collectible, rescuable ingredients. The game was powered primarily by imagination, as I ran out of time before figuring out how to setup win/lose states. Regardless, I was very happy with the end result - after all, I'd never made a game before!
+
+{% assign images = page.images[2] %}
+{% include utilities/image.html %}
+
+{% assign images = page.images[3] %}
+{% include utilities/image.html %}
 
 I had a wonderful time at the Jam, and would love to dive into one again soon. A special shout out to Media Molecule for letting us use their office space, and a big thanks to Liam for organising the weekend!
