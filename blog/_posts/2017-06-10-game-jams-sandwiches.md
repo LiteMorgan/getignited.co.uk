@@ -65,7 +65,6 @@ Any free time was dedicated to getting character designs finished for some of th
 
 
 ## Show time
-
 The end result by Sunday evening was a very scaled back puzzler. A ball stood in for our bread-faced main character, and magical floating cubes stood in for the collectible, rescuable ingredients. The game was powered primarily by imagination, as I ran out of time before figuring out how to setup win/lose states. Regardless, I was very happy with the end result - after all, I'd never made a game before!
 
 {% assign images = page.images[2] %}
