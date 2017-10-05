@@ -14,7 +14,7 @@ custom_js:
     <span class="p t--large t--lighter">— <strong>Fresh off the pipeline</strong></span>
   </div>
   <div class="post-container">
-    {% for work in site.categories.work %}
+    {% for work in site.categories.work limit: 4 %}
       {% include utilities/post.html type='work' post=work %}
     {% endfor %}
   </div>
