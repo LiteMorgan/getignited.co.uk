@@ -1,18 +1,10 @@
-export default class facebookShare {
-  constructor(el) {
-    el.addEventListener('click', (e) => { this.onClick(e) })
-  }
+document.getElementById('facebookShare').onclick = function() {
+  const pageURL   = document.querySelector('[data-link]');
+  const shareLink = pageURL.dataset.link;
 
-  onClick(evt) {
-    const facebookLink = document.querySelector('[data-link]')
-    const theLink = facebookLink.dataset.link
-
-    console.log(theLink)
-
-    FB.ui({
-      method: 'share',
-      mobile_iframe: true,
-      href: theLink,
-    }, function(response){});
-  }
+  FB.ui({
+    method: 'share',
+    mobile_iframe: true,
+    href: shareLink,
+  }, function(response){});
 };
