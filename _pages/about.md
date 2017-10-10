@@ -10,7 +10,7 @@ permalink: /about/
     <span class="p t--large t--lighter">— {{ page.subtitle }}</span>
   </div>
   <p>This is the digital portfolio of Liam Morgan, a front-end developer and UI/UX designer from Hertford. Hello! I focus on designing engaging experiences for the responsive, accessible web.</p>
-  <p>I've previously worked with Elvis Communications, improving brand performance via email and websites for a variety of clients, including Corona, The Open and Honda. I'm currently freelancing, but looking to get back into full-time.</p>
+  <p>I've previously worked with Elvis Communications, improving brand performance via websites and email for a variety of clients, including Corona, The Open and Honda. I'm currently freelancing, but looking to get back into full-time.</p>
 </section>
 
 <section>
@@ -18,12 +18,12 @@ permalink: /about/
     <div class="about-bio-cell">
       <img class="page__icon" src="/image/about/fedev.svg" alt="Front-end developer">
       <h2>Front-end developer</h2>
-      <p>I have 3 years experience working with HTML, CSS and basic Javascript. More recently, I've begun to experiment with ReactJS, and I'm enjoying the possiblities it brings for the web.</p>
+      <p>I have 3 years experience working with HTML, CSS and basic Javascript, developing robust, responsive UI elements, and engaging front end experiences. I've begun to experiment with ReactJS, and I'm enjoying the possiblities it brings.</p>
     </div>
     <div class="about-bio-cell">
       <img class="page__icon" src="/image/about/uxui.svg" alt="UI/UX Designer">
       <h2>UI/UX designer</h2>
-      <p>I enjoy the process of UI/UX design. I like starting from the building blocks of wireframes and seeing the design come to life for the responsive web. My current weapon of choice is Sketch!</p>
+      <p>I've worked on responsive wireframes and prototyping for UI elements. Working closely with a UX team has provided me further opportunities to learn more about user research and journeys. I enjoy the process of UI/UX design. My current weapon of choice is Sketch!</p>
     </div>
   </div>
 </section>
