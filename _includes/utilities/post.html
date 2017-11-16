@@ -10,17 +10,19 @@
 
 {% assign format = include.post.thumb.format %}
 
-<article class="{{ type }}-post{% if feature %} feature-post{% endif %}">
-  <a class="post-image-wrapper" href="{{ url | relative_url }}" title="{{ title }}" rel="bookmark">
-    <img class="post-image i--w js-lazyload" data-src="/image/{{ type }}/{{ post.date | date: '%Y-%m-%d' }}-{{ slug }}/thumb.{{ format | default: 'png' }}" alt="">
-  </a>
-  <div class="card{% if feature %} card__feature card-feature{% endif %}">
-    <a class="card__link" href="{{ url | relative_url }}" title="{{ title }}" rel="bookmark">
-      <h2 {% if feature %}class="feature-heading"{% endif %}><span>{{ title }}</span></h2>
-      <h3>{{ summary }}</h3>
-    </a>
-    <div class="card__meta">
-      <span class="meta">{{ tags | join: ', ' }}</span>
-    </div>
+  <article class="{{ type }}-post{% if feature %} feature-post{% endif %}">
+    <div>
+      <a class="post-image-wrapper" href="{{ url | relative_url }}" title="{{ title }}" rel="bookmark">
+        <img class="post-image i--w js-lazyload" data-src="/image/{{ type }}/{{ post.date | date: '%Y-%m-%d' }}-{{ slug }}/thumb.{{ format | default: 'png' }}" alt="">
+      </a>
   </div>
-</article>
+    <div class="card{% if feature %} card__feature card-feature{% endif %}">
+      <a class="card__link" href="{{ url | relative_url }}" title="{{ title }}" rel="bookmark">
+        <h2 {% if feature %}class="feature-heading"{% endif %}><span>{{ title }}</span></h2>
+        <h3>{{ summary }}</h3>
+      </a>
+      <div class="card__meta">
+        <span class="meta">{{ tags | join: ', ' }}</span>
+      </div>
+    </div>
+  </article>
